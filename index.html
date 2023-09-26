@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="fixed z-40 top-0 w-full bg-white py-8 border-b-2 border-black">
+        <div class="container">
+            <div class="flex items-center justify-between">
+                <a href="#">
+                    <img src="/src/images/logo.png" alt="logo">
+                </a>
+                <button onclick="handleToggleSidebar()" class="lg:hidden text-3xl text-black">
+                    <ion-icon name="reorder-three-outline"></ion-icon>
+                </button>
+                <ul class="hidden lg:flex lg:flex-wrap font-medium text-lg gap-x-8">
+                    <li>
+                        <a href="#home">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="#blog">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="#pages">PAGES</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- sidebar -->
+    <div id="sidebar" class="lg:hidden fixed z-50 right-0 top-0 w-full bg-white h-screen shadow transition-all duration-300">
+        <div class="p-5 h-screen flex flex-col">
+            <div class="text-4xl flex justify-end">
+                <!-- button close -->
+                <button onclick="handleToggleSidebar()" class="inline-flex hover:text-primary">
+                    <ion-icon name="close-sharp"></ion-icon>
+                </button>
+                <!-- end button close -->
+            </div>
+            <ul class="mt-10 font-medium text-2xl flex flex-col items-start justify-center gap-y-6">
+                <li class="w-full">
+                    <a href="#" class="flex items-center justify-between hover:text-primary">
+                        Home
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="w-full">
+                    <a href="#" class="flex items-center justify-between hover:text-primary">
+                        Portfolio
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="w-full">
+                    <a href="#" class="flex items-center justify-between hover:text-primary">
+                        Blog
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="w-full">
+                    <a href="#" class="flex items-center justify-between hover:text-primary">
+                        Pages
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+            <div class="flex flex-1 flex-col justify-end">
+                <div>
+                    <h5 class="text-xs">&copy;&nbsp;2023&nbsp;<span class="font-medium">Moonex&nbsp;</span><span>All
+                            Rights
+                            Reserved.</span></h5>
+                    <h5 class="text-xs mt-1">Developmen by&nbsp;<span class="font-medium">Achmad Zaki</span></h5>
+                </div>
+                <div class="mt-5 flex items-center gap-x-5">
+                    <a href="#"
+                        class="border border-gray-300 rounded-full h-10 w-10 flex items-center justify-center text-[#666666] hover:text-white bg-white hover:bg-[#1da1f2] transition duration-300">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#"
+                        class="border border-gray-300 rounded-full h-10 w-10 flex items-center justify-center text-[#666666] gradient__instagram transition duration-300">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#"
+                        class="border border-gray-300 rounded-full h-10 w-10 flex items-center justify-center text-[#666666] hover:text-white hover:bg-[#fa4529] transition duration-300">
+                        <ion-icon name="logo-pinterest"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end sidebar -->
+
+    <!-- home -->
+    <section class="h-[200vh] pt-28">
+        asdas
+    </section>
+    <!-- end home -->
+
+    <script src="/src/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
