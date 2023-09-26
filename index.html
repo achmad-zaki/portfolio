@@ -14,33 +14,34 @@
     <header class="fixed z-40 top-0 w-full bg-white py-8 border-b-2 border-black">
         <div class="container">
             <div class="flex items-center justify-between">
-                <a href="#">
-                    <img src="/src/images/logo.png" alt="logo">
+                <a href="#home">
+                    <img src="src/images/logo.png" alt="logo">
                 </a>
-                <button onclick="handleToggleSidebar()" class="lg:hidden text-3xl text-black">
+                <button onclick="handleToggleSidebar()" class="text-4xl text-black">
                     <ion-icon name="reorder-three-outline"></ion-icon>
                 </button>
-                <ul class="hidden lg:flex lg:flex-wrap font-medium text-lg gap-x-8">
+                <!-- <ul id="navbar" class="hidden lg:flex lg:flex-wrap text-lg gap-x-8">
                     <li>
-                        <a href="#home">HOME</a>
+                        <a href="#home" class="font-medium transition duration-300 hover:text-primary nav__active">HOME</a>
                     </li>
                     <li>
-                        <a href="#portfolio">PORTFOLIO</a>
+                        <a href="#portfolio" class="font-medium transition duration-300 hover:text-primary">PORTFOLIO</a>
                     </li>
                     <li>
-                        <a href="#blog">BLOG</a>
+                        <a href="#blog" class="font-medium transition duration-300 hover:text-primary">BLOG</a>
                     </li>
                     <li>
-                        <a href="#pages">PAGES</a>
+                        <a href="#pages" class="font-medium transition duration-300 hover:text-primary">PAGES</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </header>
     <!-- end header -->
 
     <!-- sidebar -->
-    <div id="sidebar" class="lg:hidden fixed z-50 right-0 top-0 w-full bg-white h-screen shadow transition-all duration-300">
+    <div id="sidebar"
+        class="fixed z-50 -right-full top-0 w-full md:w-1/2 lg:w-2/6 bg-white h-screen shadow transition-all duration-300">
         <div class="p-5 h-screen flex flex-col">
             <div class="text-4xl flex justify-end">
                 <!-- button close -->
@@ -49,15 +50,15 @@
                 </button>
                 <!-- end button close -->
             </div>
-            <ul class="mt-10 font-medium text-2xl flex flex-col items-start justify-center gap-y-6">
+            <ul id="sidebar" class="mt-10 font-medium text-2xl flex flex-col items-start justify-center gap-y-6">
                 <li class="w-full">
-                    <a href="#" class="flex items-center justify-between hover:text-primary">
+                    <a href="#home" class="text-primary flex items-center justify-between hover:text-primary">
                         Home
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                     </a>
                 </li>
                 <li class="w-full">
-                    <a href="#" class="flex items-center justify-between hover:text-primary">
+                    <a href="#portfolio" class="flex items-center justify-between hover:text-primary">
                         Portfolio
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                     </a>
@@ -102,10 +103,47 @@
     <!-- end sidebar -->
 
     <!-- home -->
-    <section class="h-[200vh] pt-28">
-        asdas
+    <section id="home" class="pt-32">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="font-playfair text-3xl md:text-4xl font-medium">Bruno Erdison <br>
+                    UI/UX&nbsp;Interaction&nbsp;Designer <br> Bases in Poland</h1>
+            </div>
+            <div class="mt-8 grid grid-cols-1 xl:grid-cols-3 place-items-center place-content-between">
+                <div class="order-2 xl:order-1 w-full flex flex-col items-center xl:items-start">
+                    <div class="mt-7 xl:mt-0 uppercase mb-5 text-center flex flex-col items-center xl:items-start">
+                        <h1 class="text-xl font-normal">years of experience</h1>
+                        <h5 class="text-4xl font-medium mt-3">8</h5>
+                    </div>
+                    <div class="uppercase mb-8 text-center flex flex-col items-center xl:items-start">
+                        <h1 class="text-xl font-normal">satisfitation clients</h1>
+                        <h5 class="text-4xl font-medium mt-3">100%</h5>
+                    </div>
+                </div>
+                <div class="order-1 xl:order-2 border-2 w-80 md:w-96 mx-auto md:ml-auto rounded-full p-4">
+                    <img src="src/images/image-hero.png" class="w-full bg-gradient-to-t from-gray-500 to-gray-400 rounded-full overflow-hidden"
+                        alt="image hero">
+                </div>
+                <div class="order-3 xl:order-3 w-full flex flex-col items-center xl:items-end">
+                    <div class="uppercase mb-8 text-center flex flex-col items-center xl:items-end">
+                        <h1 class="text-xl font-normal">clients on worldwide</h1>
+                        <h5 class="text-4xl font-medium mt-3">+ 80</h5>
+                    </div>
+                    <div class="uppercase text-center flex flex-col items-center xl:items-end">
+                        <h1 class="text-xl font-normal">project done</h1>
+                        <h5 class="text-4xl font-medium mt-3">400</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- end home -->
+
+    <!-- portfolio -->
+    <section id="portfolio" class="min-h-[200vh] pt-32">
+        portfolio
+    </section>
+    <!-- end portfolio -->
 
     <script src="src/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

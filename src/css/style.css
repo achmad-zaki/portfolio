@@ -5,6 +5,8 @@
 
 ::-webkit-scrollbar-thumb {
     background-color: #fa4529;
+    border-radius: 20px;
+    width: 7px;
 }
 
 .gradient__instagram:hover {

@@ -12,3 +12,13 @@
         @apply font-montserrat;
     }
 }
+
+@layer components {
+    .nav__active {
+        @apply text-primary relative before:content-[''] before:absolute before:inset-x-0 before:-bottom-3 before:left-[45%] before:w-1 before:h-1 before:bg-primary before:rounded-full
+    }
+
+    .nav__active-sidebar {
+        @apply text-primary
+    }
+}
