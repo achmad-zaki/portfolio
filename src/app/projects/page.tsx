@@ -1,5 +1,5 @@
-export default function ProjectsPage() {
+export default function ProjectPage() {
     return (
-        <div>ProjectPage</div>
+        <div>Project</div>
     )
 }

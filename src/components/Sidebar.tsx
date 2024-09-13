@@ -1,4 +1,4 @@
-const Sidebar = () => {
+const Sidebar = ({ children }: { children: React.ReactNode }) => {
     return (
         <div>Sidebar</div>
     )
