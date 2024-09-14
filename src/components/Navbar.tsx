@@ -10,6 +10,7 @@ import { SOCIAL_ITEMS } from "@/constants/social";
 import DarkMode from "@/components/DarkMode";
 import Search from "./Search";
 import { useState } from "react";
+import { motion } from "framer-motion"
 
 export default function Navbar() {
     const pathname = usePathname()
@@ -20,7 +21,7 @@ export default function Navbar() {
     }
 
     return (
-        <header className="fixed top-0 w-full dark:bg-neutral-900 bg-neutral-100 border-b dark:border-b-neutral-700 border-b-neutral-300 md:hidden">
+        <header className="fixed z-50 top-0 w-full dark:bg-neutral-900 bg-neutral-100 border-b dark:border-b-neutral-700 border-b-neutral-300 md:hidden">
             <div className="p-5 flex items-center justify-between">
                 <Link href="/">
                     <div className="flex items-center">
@@ -34,7 +35,7 @@ export default function Navbar() {
             </div>
             {isShow && (
                 <>
-                    <div className="p-4 border-t dark:border-t-neutral-700 border-t-neutral-300">
+                    <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ ease: 'easeInOut', duration: 0.50 }} className="p-4 border-t dark:border-t-neutral-700 border-t-neutral-300">
                         <div className="flex flex-col gap-y-2">
                             {MENU_ITEMS.map((menu, index) => {
                                 const activeClass = pathname === menu.href ? 'dark:bg-neutral-600 bg-neutral-200' : '';
@@ -73,7 +74,7 @@ export default function Navbar() {
                                 <Search />
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </>
             )}
         </header>

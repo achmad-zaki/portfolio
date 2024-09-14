@@ -1,6 +1,11 @@
-const Sidebar = ({ children }: { children: React.ReactNode }) => {
+import Link from "next/link"
+
+const Sidebar = () => {
     return (
-        <div>Sidebar</div>
+        <aside className="fixed z-50 left-0 top-0 h-screen hidden md:block border py-3 w-24">
+            <Link href="/">home</Link>
+            <Link href="/projects">project</Link>
+        </aside>
     )
 }
 
