@@ -5,7 +5,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 
 export const MENU_ITEMS = [
     {
-        name: 'homepage',
+        name: 'home',
         icon: GoHome,
         href: '/'
     },

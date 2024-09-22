@@ -23,12 +23,10 @@ export default function Navbar() {
     return (
         <header className="fixed z-50 top-0 w-full dark:bg-neutral-900 bg-neutral-100 border-b dark:border-b-neutral-700 border-b-neutral-300 md:hidden">
             <div className="p-5 flex items-center justify-between">
-                <Link href="/">
-                    <div className="flex items-center">
-                        <Avatar />
-                        <span className="ml-3 font-semibold dark:text-neutral-300 text-neutral-700">Achmad Zaki</span>
-                    </div>
-                </Link>
+                <div className="flex items-center">
+                    <Avatar />
+                    <span className="ml-3 font-semibold dark:text-neutral-300 text-neutral-700">Achmad Zaki</span>
+                </div>
                 <button onClick={handleButtonClick} className="hover:dark:bg-neutral-600 hover:bg-neutral-200 p-2 rounded-lg transition-smooth">
                     <FaBars className="size-6 text-muted-foreground" />
                 </button>
@@ -39,12 +37,12 @@ export default function Navbar() {
                         <div className="flex flex-col gap-y-2">
                             {MENU_ITEMS.map((menu, index) => {
                                 const activeClass = pathname === menu.href ? 'dark:bg-neutral-600 bg-neutral-200' : '';
-                                const activeText = pathname === menu.href ? 'dark:text-neutral-100 text-neutral-700' : '';
+                                const activeText = pathname === menu.href ? 'dark:text-neutral-100 text-neutral-700' : 'text-neutral-500';
 
                                 return (
                                     <Link key={index} href={menu.href}>
                                         <div className={twMerge(`group flex items-center gap-3 hover:dark:bg-neutral-700 hover:bg-neutral-200 transition-smooth px-4 py-2 rounded-lg`, activeClass)}>
-                                            <menu.icon className={twMerge(`size-5 text-neutral-500`, activeText)} />
+                                            <menu.icon className={twMerge(`size-5`, activeText)} />
                                             <div className={twMerge(`flex-grow text-neutral-500 text-sm group-hover:dark:text-neutral-100 group-hover:text-neutral-700 font-medium transition-smooth capitalize`, activeText)}>
                                                 {menu.name}
                                             </div>
@@ -53,6 +51,7 @@ export default function Navbar() {
                                 )
                             })}
                         </div>
+
                         <div className="space-y-2 mt-3 pt-5 border-t dark:border-t-neutral-800 border-t-neutral-300">
                             <div className="px-3 text-xs text dark:text-neutral-500 text-neutral-600">Social</div>
                             <div className="flex flex-col gap-y-2">
