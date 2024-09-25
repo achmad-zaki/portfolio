@@ -1,5 +1,3 @@
-import { GoHome } from "react-icons/go";
-// import { LuShoppingBag } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa6";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { PiHandbagSimpleBold } from "react-icons/pi";

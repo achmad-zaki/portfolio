@@ -23,7 +23,7 @@ const Sidebar = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center lg:items-start gap-y-10 flex-1">
+                <div className="flex flex-col items-center lg:items-start gap-y-5 flex-1">
                     <div className="w-full flex flex-col gap-y-1">
                         {MENU_ITEMS.map((menu, index) => {
                             const activeClass = pathname === menu.href ? 'dark:bg-neutral-700 bg-neutral-200 border border-neutral-600' : ''
@@ -72,7 +72,7 @@ const Sidebar = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-5 items-center justify-center">
+                <div className="flex flex-col lg:flex-row gap-3 items-center justify-center">
                     <DarkMode />
                     <Search />
                 </div>
