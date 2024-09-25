@@ -12,7 +12,7 @@ const DarkMode = () => {
         <>
             {theme === 'dark' ? (
                 <button onClick={() => setTheme('light')} className="dark:hover:bg-neutral-800 hover:bg-neutral-200 p-2 rounded-full transition-smooth hover:rotate-12">
-                    <RiMoonFill className="size-6 text-neutral-300" />
+                    <RiMoonFill className="size-6 text-neutral-500" />
                 </button>
             ) : (
                 <button onClick={() => setTheme('dark')} className="dark:hover:bg-neutral-800 hover:bg-neutral-200 p-2 rounded-full transition-smooth hover:rotate-12">
