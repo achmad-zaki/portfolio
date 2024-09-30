@@ -12,7 +12,10 @@ const config = {
 	theme: {
 		extend: {
 			colors: {
-				text: 'hsl(var(--text))',
+				text: {
+					DEFAULT: 'hsl(var(--text))',
+					foreground: 'hsl(var(--text-foreground))'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

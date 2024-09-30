@@ -3,6 +3,7 @@ import MotionSection from "@/components/MotionSection";
 import Button from "@/components/ui/button";
 import { IoCopyOutline } from "react-icons/io5";
 import Link from "next/link";
+import CardProject from "@/components/ui/card-project";
 
 export default function HomePage() {
   return (
@@ -17,7 +18,7 @@ export default function HomePage() {
           </div>
         </div>
         <div>
-          <p className="mt-6 dark:text-neutral-400 text-lg">Frontend developer with a year of experience, specializing in slicing website layouts to create precise, responsive designs.</p>
+          <p className="mt-6 text-text-foreground text-lg">Frontend developer with a year of experience, specializing in slicing website layouts to create precise, responsive designs.</p>
         </div>
         <div className="mt-8 flex flex-col md:flex-row items-center gap-4">
           <Link href="/about" className="block w-full md:w-auto">
@@ -40,8 +41,12 @@ export default function HomePage() {
       </MotionSection>
 
       <MotionSection delay={0.3}>
-        <h1 className="text-2xl font-semibold dark:text-neutral-100 text-neutral-800">Selected Work</h1>
+        <h1 className="text-2xl font-semibold dark:text-neutral-100 text-neutral-800">Latest Project</h1>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+          <CardProject />
+          <CardProject />
+        </div>
       </MotionSection>
     </div>
   );
