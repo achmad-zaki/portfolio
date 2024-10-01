@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import Avatar from "./Avatar";
+import Avatar from "./ui/avatar";
 import { MENU_ITEMS } from "@/constants/menu";
 import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";

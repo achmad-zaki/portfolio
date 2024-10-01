@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import Avatar from "./Avatar"
+import Avatar from "./ui/avatar"
 import { MENU_ITEMS } from "@/constants/menu"
 import { usePathname } from "next/navigation"
 import { twMerge } from "tailwind-merge"
@@ -19,7 +19,7 @@ const Sidebar = () => {
                 <div className="flex items-center">
                     <Avatar />
                     <div className="hidden lg:block ml-3">
-                        <h5 className="text-foreground font-semibold">Achmad Zaki</h5>
+                        <h5 className="text-text font-semibold">Achmad Zaki</h5>
                         <p className="text-sm text-neutral-500">Frontend Developer</p>
                     </div>
                 </div>
