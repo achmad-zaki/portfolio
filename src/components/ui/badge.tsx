@@ -1,36 +1,54 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+'use client'
 
-import { cn } from "@/lib/utils"
+import { FC } from "react"
+import { RiTailwindCssFill, RiNextjsFill, RiReactjsFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
+import { IoLogoJavascript, IoLogoCss3, IoLogoHtml5, IoLogoFigma, IoLogoVercel } from "react-icons/io5";
+import { FaSass, FaGitAlt, FaGithub, FaNodeJs } from "react-icons/fa";
+import { FaGitlab } from "react-icons/fa6";
+import { SiExpress } from "react-icons/si";
+import { SiChakraui } from "react-icons/si";
+import { motion } from "framer-motion"
 
-const badgeVariants = cva(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-  {
-    variants: {
-      variant: {
-        default:
-          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
-        secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        destructive:
-          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-        outline: "text-foreground",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-    },
-  }
-)
+interface IBadgeProps {
+  name: string
+  icon: string
+}
 
-export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
+const Badge: FC<IBadgeProps> = ({
+  name,
+  icon
+}) => {
 
-function Badge({ className, variant, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+    <motion.div
+      initial={{ opacity: 1 }}
+      animate={{ opacity: [1, 0.5, 1] }}
+      transition={{
+        duration: Math.random() * 5 + 3,
+        repeat: Infinity,
+        repeatType: "mirror",
+      }}
+      className="shadow-sm text-text text-sm border whitespace-nowrap font-medium flex items-center gap-2 dark:bg-neutral-800 bg-neutral-100 dark:border-neutral-700 border-neutral-300 rounded-full px-4 py-2 opacity-30">
+      {icon === 'nextjs' && (<RiNextjsFill className="size-5 dark:text-neutral-50 text-neutral-900" />)}
+      {icon === 'react' && (<RiReactjsFill className="size-5 text-blue-500" />)}
+      {icon === 'tailwind' && (<RiTailwindCssFill className="size-5 text-sky-500" />)}
+      {icon === 'typescript' && (<BiLogoTypescript className="size-5 text-blue-600" />)}
+      {icon === 'javascript' && (<IoLogoJavascript className="size-5 text-yellow-500" />)}
+      {icon === 'css' && (<IoLogoCss3 className="size-5 text-blue-500" />)}
+      {icon === 'html' && (<IoLogoHtml5 className="size-5 text-orange-500" />)}
+      {icon === 'sass' && (<FaSass className="size-5 text-pink-500" />)}
+      {icon === 'figma' && (<IoLogoFigma className="size-5 text-pink-600" />)}
+      {icon === 'vercel' && (<IoLogoVercel className="size-5 dark:text-neutral-100 text-neutral-950" />)}
+      {icon === 'git' && (<FaGitAlt className="size-5 text-red-500" />)}
+      {icon === 'github' && (<FaGithub className="size-5 dark:text-neutral-100 text-neutral-950" />)}
+      {icon === 'gitlab' && (<FaGitlab className="size-5 text-orange-600" />)}
+      {icon === 'nodejs' && (<FaNodeJs className="size-5 text-green-500" />)}
+      {icon === 'express' && (<SiExpress className="size-5 dark:text-neutral-100 text-neutral-950" />)}
+      {icon === 'chakraui' && (<SiChakraui className="size-5 text-teal-500" />)}
+      {name}
+    </motion.div>
   )
 }
 
-export { Badge, badgeVariants }
+export default Badge

@@ -5,6 +5,8 @@ import { IoCopyOutline } from "react-icons/io5";
 import Link from "next/link";
 import CardProject from "@/components/ui/card-project";
 import { LIST_PROJECTS } from "@/constants/project";
+import { Badge } from "@/components/ui";
+import { LIST_TECHS } from "@/constants/tech";
 
 export default function HomePage() {
   return (
@@ -42,7 +44,24 @@ export default function HomePage() {
       </MotionSection>
 
       <MotionSection delay={0.3}>
-        <h1 className="text-2xl font-semibold text-text">Latest Project</h1>
+        <h1 className="text-2xl font-semibold text-text">Tools that I have used</h1>
+        <div
+          className="grid grid-cols-2 md:flex md:flex-wrap gap-2 mt-5">
+          {LIST_TECHS.map((tech, index) => (
+            <Badge
+              key={index}
+              name={tech.name}
+              icon={tech.icon}
+            />
+          ))}
+        </div>
+      </MotionSection>
+
+      <MotionSection delay={0.5}>
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold text-text">Latest Project</h1>
+          <Link href="/projects" className="text-text-foreground">View All</Link>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
           {LIST_PROJECTS.map((project, index) => (
             <CardProject
@@ -56,8 +75,9 @@ export default function HomePage() {
         </div>
       </MotionSection>
 
-      <MotionSection delay={0.5}>
-        <h1 className="text-2xl font-semibold text-text">Tools that I have used</h1>
+      <MotionSection delay={0.7}>
+        <h1 className="text-2xl font-semibold text-text">Got questions?</h1>
+        <p className="mt-3 text-text-foreground text-lg">I&apos;m always excited to collaborate on innovative and exciting projects!</p>
       </MotionSection>
     </div>
   );

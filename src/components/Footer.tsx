@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className='border-t mt-10 pt-5'>
+        <footer className='border-t mt-10 pt-5'>
             <div className='flex flex-wrap gap-x-3'>
                 <p className='text-sm dark:text-neutral-500 text-neutral-500 font-medium'>Built in <Link href="https://nextjs.org/" className='text-text dark:hover:text-neutral-400 transition-smooth'>Next JS</Link></p>
                 <p className='dark:text-neutral-500 text-neutral-500'>&#903;</p>
@@ -11,7 +11,7 @@ const Footer = () => {
                 <p className='dark:text-neutral-500 text-neutral-500'>&#903;</p>
                 <p className='text-sm dark:text-neutral-500 text-neutral-500 font-medium'>&copy;{new Date().getFullYear()} Personal Website</p>
             </div>
-        </div>
+        </footer>
     )
 }
 
