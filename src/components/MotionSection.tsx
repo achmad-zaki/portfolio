@@ -1,8 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion';
+import { FC } from 'react';
 
-const MotionSection = ({ children, delay = 0 }: { children: React.ReactNode, delay: number }) => {
+interface IMotionSectionProps {
+    children: React.ReactNode
+    delay?: number
+}
+
+const MotionSection: FC<IMotionSectionProps> = ({
+    children,
+    delay,
+}) => {
+
     return (
         <motion.section
             initial={{ opacity: 0, translateY: 15 }}

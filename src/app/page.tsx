@@ -6,12 +6,14 @@ import Link from "next/link";
 import CardProject from "@/components/ui/card-project";
 import { LIST_PROJECTS } from "@/constants/project";
 import { Badge } from "@/components/ui";
+import { MdAlternateEmail } from "react-icons/md";
+import { FiPhone } from "react-icons/fi";
 import { LIST_TECHS } from "@/constants/tech";
 
 export default function HomePage() {
   return (
     <div className="space-y-16">
-      <MotionSection delay={0.15}>
+      <MotionSection>
         <h1 className="text-4xl font-bold text-text">Hello! I&apos;m Zaki</h1>
         <div className="flex flex-wrap gap-3">
           <h3 className="text-3xl font-medium dark:text-indigo-300 text-indigo-600 mt-1">Frontend Developer</h3>
@@ -78,6 +80,36 @@ export default function HomePage() {
       <MotionSection delay={0.7}>
         <h1 className="text-2xl font-semibold text-text">Got questions?</h1>
         <p className="mt-3 text-text-foreground text-lg">I&apos;m always excited to collaborate on innovative and exciting projects!</p>
+
+        <div className="flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row gap-y-5 gap-x-28 mt-6">
+            <div className="flex items-center">
+              <div className="rounded-full dark:bg-neutral-700 bg-neutral-200 size-12 flex items-center justify-center border dark:border-neutral-600 border-neutral-300">
+                <MdAlternateEmail className="size-5 text-text-foreground" />
+              </div>
+              <div className="ml-3">
+                <h5 className="text-text-foreground font-medium">E-mail</h5>
+                <p className="text-sm">achmadzaky9d@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="flex items-center">
+              <div className="rounded-full dark:bg-neutral-700 bg-neutral-200 size-12 flex items-center justify-center border dark:border-neutral-600 border-neutral-300">
+                <FiPhone className="size-5 text-text-foreground" />
+              </div>
+              <div className="ml-3">
+                <h5 className="text-text-foreground font-medium">Phone</h5>
+                <p className="text-sm">+62 859 999 0000</p>
+              </div>
+            </div>
+          </div>
+          <Link
+            href="/contact"
+            className="w-full md:w-auto"
+          >
+            <Button variant="outline" className="mt-8 w-full md:w-auto">Contact me</Button>
+          </Link>
+        </div>
       </MotionSection>
     </div>
   );
