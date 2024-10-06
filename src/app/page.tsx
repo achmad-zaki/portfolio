@@ -65,13 +65,10 @@ export default function HomePage() {
           <Link href="/projects" className="text-text-foreground">View All</Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
-          {LIST_PROJECTS.map((project, index) => (
+          {LIST_PROJECTS.filter((project) => project.created_at > "2024-10-03").map((project, index) => (
             <CardProject
               key={index}
-              title={project.title}
-              desc={project.desc}
-              icons={project.icons}
-              image={project.image}
+              {...project}
             />
           ))}
         </div>

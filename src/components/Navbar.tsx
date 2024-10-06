@@ -9,7 +9,7 @@ import { FaBars } from "react-icons/fa6";
 import { SOCIAL_ITEMS } from "@/constants/social";
 import DarkMode from "@/components/DarkMode";
 import Search from "./Search";
-import { useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { motion } from "framer-motion"
 
 export default function Navbar() {
@@ -19,6 +19,28 @@ export default function Navbar() {
     const handleButtonClick = () => {
         setIsShow(!isShow)
     }
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                document.body.classList.remove('overflow-hidden');
+                setIsShow(false);
+            }
+        };
+
+        if (isShow) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isShow]);
 
     return (
         <header className="fixed z-50 top-0 w-full dark:bg-neutral-900 bg-neutral-100 border-b dark:border-b-neutral-700 border-b-neutral-300 md:hidden">
@@ -32,7 +54,7 @@ export default function Navbar() {
                 </button>
             </div>
             {isShow && (
-                <>
+                <Fragment>
                     <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ ease: 'easeInOut', duration: 0.50 }} className="p-4 border-t dark:border-t-neutral-700 border-t-neutral-300">
                         <div className="flex flex-col gap-y-2">
                             {MENU_ITEMS.map((menu, index) => {
@@ -74,7 +96,7 @@ export default function Navbar() {
                             </div>
                         </div>
                     </motion.div>
-                </>
+                </Fragment>
             )}
         </header>
     )

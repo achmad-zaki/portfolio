@@ -78,3 +78,18 @@
     @apply transition-all duration-300 ease-in-out
   }
 }
+
+@layer components {
+  ::-webkit-scrollbar {
+    width: 0.375rem;
+    height: 0.375rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply dark:bg-neutral-600 bg-neutral-400 rounded-full;
+  }
+}
