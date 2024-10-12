@@ -17,7 +17,7 @@ export default function AboutPage() {
                 <h1 className="text-xl font-semibold text-text">Experience</h1>
                 <div className="mt-6 space-y-10">
                     {LIST_EXPERIENCES.map((experience, index) => (
-                        <MotionSection key={index} delay={index * 0.4}>
+                        <MotionSection key={index} delay={index * 0.3}>
                             <div className="flex items-start">
                                 <Image src={experience.image} alt="Logo" width={55} height={55} className="bg-white flex items-center justify-center size-14 rounded-md border border-text-text shadow-sm" />
                                 <div className="ml-5">
