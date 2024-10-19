@@ -10,7 +10,7 @@ interface IButtonProps {
     icon?: ReactNode
     children: ReactNode,
     size?: "sm" | "md" | "lg",
-    variant?: "default" | "outline"
+    variant?: "default" | "outline" | "success"
 }
 
 const Button: FC<IButtonProps> = ({
@@ -19,13 +19,15 @@ const Button: FC<IButtonProps> = ({
     className,
     icon,
     size = "md",
-    variant = "default"
+    variant = "default",
+    onClick
 }) => {
 
     const baseClases = "font-medium rounded-xl inline-flex items-center justify-center border transition-smooth"
 
     const buttonVariants = {
         default: "dark:bg-neutral-700 bg-neutral-800 text-neutral-50 dark:hover:bg-neutral-600 hover:bg-indigo-600 dark:border-neutral-500 border-neutral-200",
+        success: "border border-emerald-500",
         outline: "dark:border-neutral-700 border-neutral-400 dark:hover:border-neutral-500 hover:border-neutral-500 dark:text-neutral-50 text-neutral-800",
     }
 
@@ -37,6 +39,7 @@ const Button: FC<IButtonProps> = ({
 
     return (
         <button
+            onClick={onClick}
             className={twMerge(`${baseClases} ${buttonVariants[variant]} ${buttonSize[size]} ${className}`)}
             type={type}
         >

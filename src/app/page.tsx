@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { LIST_TECHS } from "@/constants/tech";
+import ButtonEmail from "@/components/ButtonEmail";
 
 export default function HomePage() {
   return (
@@ -34,14 +35,7 @@ export default function HomePage() {
               About
             </Button>
           </Link>
-          <Button
-            icon={<IoCopyOutline className="size-5 text-neutral-500" />}
-            size="md"
-            variant="outline"
-            className="w-full md:w-auto"
-          >
-            Copy Email
-          </Button>
+          <ButtonEmail />
         </div>
       </MotionSection>
 
