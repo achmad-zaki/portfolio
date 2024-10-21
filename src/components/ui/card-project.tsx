@@ -29,7 +29,7 @@ const CardProject: FC<ICardProjectProps> = ({
             <div className="relative group overflow-hidden cursor-pointer">
                 <Image loading="lazy" src={image} alt="Project" width={500} height={500} className="h-48 object-cover object-center w-full group-hover:scale-105 transition-smooth group-hover:blur-sm" />
 
-                <div className="absolute z-10 bg-black/90 opacity-0 group-hover:opacity-100 size-full flex items-center justify-center top-0 transition-smooth">
+                <div className="absolute z-10 bg-black/80 opacity-0 group-hover:opacity-100 size-full flex items-center justify-center top-0 transition-smooth">
                     <div className="flex items-center font-medium text-neutral-100 gap-3">
                         <span className="text-sm">View Project</span>
                         <FaArrowRightLong className="size-4" />

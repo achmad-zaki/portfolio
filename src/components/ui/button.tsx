@@ -27,7 +27,7 @@ const Button: FC<IButtonProps> = ({
 
     const buttonVariants = {
         default: "dark:bg-neutral-700 bg-neutral-800 text-neutral-50 dark:hover:bg-neutral-600 hover:bg-indigo-600 dark:border-neutral-500 border-neutral-200",
-        success: "border border-emerald-500",
+        success: "border border-emerald-500 bg-emerald-700/20",
         outline: "dark:border-neutral-700 border-neutral-400 dark:hover:border-neutral-500 hover:border-neutral-500 dark:text-neutral-50 text-neutral-800",
     }
 

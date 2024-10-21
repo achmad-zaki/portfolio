@@ -2,15 +2,21 @@ import { ASSETS } from "@/assets";
 import MotionSection from "@/components/MotionSection";
 import { LIST_EXPERIENCES } from "@/constants/experience";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function AboutPage() {
     return (
         <div className="space-y-10">
             <MotionSection>
-                <h1 className="text-text font-semibold text-3xl">Achmad Zaki Fathurohman</h1>
-                <h3 className="text-text-foreground font-semibold text-3xl mt-2">Frontend Developer</h3>
-                <p className="text-text-foreground mt-6 leading-relaxed text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus asperiores eligendi totam harum quos placeat ab, dolorum, voluptatibus voluptates praesentium facilis autem architecto tempore animi.</p>
+                <div className="grid grid-cols-1 lg:grid-cols-5">
+                    <div className="col-span-3">
+                        <h1 className="text-text font-semibold text-3xl">Achmad Zaki Fathurohman</h1>
+                        <h3 className="text-text-foreground font-semibold text-3xl mt-2">Frontend Developer</h3>
+                        <p className="text-text-foreground mt-6 leading-relaxed text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus asperiores eligendi totam harum quos placeat ab, dolorum, voluptatibus voluptates praesentium facilis autem architecto tempore animi.</p>
+                    </div>
+                    <div className="col-span-2">
+                        <Image className="hidden lg:block size-44 object-cover object-top rounded-md ml-auto" width={500} height={500} src={ASSETS.UserProfile} alt="Profile" />
+                    </div>
+                </div>
             </MotionSection>
 
             <MotionSection delay={0.3}>
